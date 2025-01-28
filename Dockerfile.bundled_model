@@ -18,8 +18,6 @@ ENV MODEL_NAME=$MODEL_NAME
 
 COPY ./model_downloader.sh /workspace/model_downloader.sh
 
-RUN pip install 'git+https://github.com/huggingface/transformers.git'
-
 RUN pip install --no-cache-dir huggingface_hub[cli,hf_transfer]
 
 RUN --mount=type=secret,id=hf_token \
